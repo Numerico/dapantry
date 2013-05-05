@@ -8,15 +8,6 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
-  # GET /items/1
-  # GET /items/1.json
-  def show
-  end
-
-  # GET /items/1/edit
-  def edit
-  end
-
   # POST /items
   # POST /items.json
   def create

@@ -22,16 +22,6 @@ class ItemsControllerTest < ActionController::TestCase
     assert_redirected_to items_path
   end
 
-  test "should show item" do
-    get :show, id: @item
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, id: @item
-    assert_response :success
-  end
-
   test "should update item" do
     patch :update, id: @item, item: { hay: @item.hay, name: @item.name }
     assert_redirected_to item_path(assigns(:item))
