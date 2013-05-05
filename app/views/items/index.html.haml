@@ -1,8 +1,7 @@
-- @items.each do |item|
-  .row-fluid
-    .span4= item.name
-    .span4= check_box_tag item.id, nil, item.hay, class: 'ajaxable'
-    .span4= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
-%br
-
-= render 'form'
+%table.table.table-hover.table-bordered
+  - @items.each do |item|
+    %tr
+      %td= item.name
+      %td= check_box_tag item.id, nil, item.hay, class: 'ajaxable'
+      %td= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  %tr= render 'form'
