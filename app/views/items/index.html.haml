@@ -2,7 +2,7 @@
   - @items.each do |item|
     %li
       %span= item.name
-      %span= check_box_tag nil, nil, item.hay
+      %span= check_box_tag item.id, nil, item.hay, class: 'ajaxable'
       %span= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
 %br
 
