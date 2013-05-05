@@ -9,6 +9,9 @@ class ItemsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:items)
+    assert_select "ul input[type='checkbox']", assigns(:items).count
+    assert_select "ul input[checked]", 1
+    
   end
 
   test "should create item" do
