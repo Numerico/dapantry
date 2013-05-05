@@ -5,16 +5,12 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    @item = Item.new
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
-  end
-
-  # GET /items/new
-  def new
-    @item = Item.new
   end
 
   # GET /items/1/edit

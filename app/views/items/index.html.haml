@@ -1,21 +1,9 @@
-%h1 Listing items
-
-%table
-  %tr
-    %th Name
-    %th Hay
-    %th
-    %th
-    %th
-
+%ul
   - @items.each do |item|
-    %tr
-      %td= item.name
-      %td= item.hay
-      %td= link_to 'Show', item
-      %td= link_to 'Edit', edit_item_path(item)
-      %td= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
+    %li
+      %span= item.name
+      %span= item.hay
+      %span= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
 %br
 
-= link_to 'New Item', new_item_path
+= render 'form'

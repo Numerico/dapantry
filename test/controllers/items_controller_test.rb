@@ -11,11 +11,6 @@ class ItemsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:items)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
   test "should create item" do
     assert_difference('Item.count') do
       post :create, item: { hay: @item.hay, name: @item.name }
