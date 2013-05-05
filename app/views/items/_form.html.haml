@@ -1,7 +1,8 @@
 = form_for @item do |f|
-  %span.field
-    = f.text_field :name
-  %span.field
-    = f.check_box :hay
-  %span.actions
-    = f.submit 'Save'
+  .row-fluid
+    .span4.field
+      = f.text_field :name
+    .span4.field
+      = f.check_box :hay
+    .span4.actions
+      = f.submit 'Save'

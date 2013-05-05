@@ -1,9 +1,8 @@
-%ul
-  - @items.each do |item|
-    %li
-      %span= item.name
-      %span= check_box_tag item.id, nil, item.hay, class: 'ajaxable'
-      %span= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
+- @items.each do |item|
+  .row-fluid
+    .span4= item.name
+    .span4= check_box_tag item.id, nil, item.hay, class: 'ajaxable'
+    .span4= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
 %br
 
 = render 'form'
