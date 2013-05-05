@@ -3,5 +3,5 @@
     %tr
       %td= item.name
       %td= check_box_tag item.id, nil, item.hay, class: 'ajaxable'
-      %td= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Quitar', item, method: :delete, data: { confirm: '¿Segurísimo?' }, class: 'btn'
   %tr= render 'form'
