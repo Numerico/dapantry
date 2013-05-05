@@ -16,7 +16,7 @@ class ItemsControllerTest < ActionController::TestCase
       post :create, item: { hay: @item.hay, name: @item.name }
     end
 
-    assert_redirected_to item_path(assigns(:item))
+    assert_redirected_to items_path
   end
 
   test "should show item" do
